@@ -15,108 +15,191 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow {
-    background-color: #1a1a2e;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #0d1b2a, stop:0.5 #1b263b, stop:1 #0d1b2a);
 }
 
 QMenuBar {
-    background-color: #16213e;
-    color: #e8e8e8;
-    padding: 4px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #1b263b, stop:1 #0d1b2a);
+    color: #e0e1dd;
+    padding: 6px 8px;
     font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(65, 90, 119, 0.5);
 }
 
 QMenuBar::item {
     background-color: transparent;
-    padding: 6px 12px;
-    border-radius: 4px;
-    margin: 2px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 2px 4px;
 }
 
 QMenuBar::item:selected {
-    background-color: #0f3460;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #415a77, stop:1 #1b263b);
+    color: #ffffff;
+}
+
+QMenuBar::item:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #778da9, stop:1 #415a77);
 }
 
 QMenu {
-    background-color: #16213e;
-    color: #e8e8e8;
-    border: 1px solid #0f3460;
-    padding: 5px;
+    background-color: #1b263b;
+    color: #e0e1dd;
+    border: 1px solid #415a77;
+    border-radius: 8px;
+    padding: 8px 4px;
 }
 
 QMenu::item {
-    padding: 8px 30px 8px 20px;
-    border-radius: 3px;
+    padding: 10px 35px 10px 25px;
+    border-radius: 6px;
+    margin: 2px 6px;
 }
 
 QMenu::item:selected {
-    background-color: #0f3460;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #415a77, stop:1 #778da9);
+    color: #ffffff;
 }
 
 QMenu::separator {
     height: 1px;
-    background: #3a3a5c;
-    margin: 5px 10px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 transparent, stop:0.5 #415a77, stop:1 transparent);
+    margin: 8px 15px;
+}
+
+QMenu::indicator {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
 }
 
 QToolBar {
-    background-color: #16213e;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #1b263b, stop:1 #0d1b2a);
     border: none;
-    padding: 5px;
-    spacing: 5px;
+    border-bottom: 1px solid rgba(65, 90, 119, 0.3);
+    padding: 8px 10px;
+    spacing: 6px;
 }
 
 QToolBar::separator {
-    width: 2px;
-    background-color: #3a3a5c;
-    margin: 5px 8px;
+    width: 1px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 transparent, stop:0.5 #415a77, stop:1 transparent);
+    margin: 8px 12px;
 }
 
 QToolButton {
-    background-color: #0f3460;
-    color: #e8e8e8;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    margin: 2px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #415a77, stop:1 #1b263b);
+    color: #e0e1dd;
+    border: 1px solid rgba(119, 141, 169, 0.3);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 3px;
     font-size: 12px;
+    font-weight: 500;
 }
 
 QToolButton:hover {
-    background-color: #1a4b8c;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #778da9, stop:1 #415a77);
+    border: 1px solid #778da9;
+    color: #ffffff;
 }
 
 QToolButton:pressed {
-    background-color: #e94560;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #e63946, stop:1 #9d0208);
+    border: 1px solid #e63946;
+}
+
+QToolButton:checked {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2a9d8f, stop:1 #264653);
+    border: 1px solid #2a9d8f;
+    color: #ffffff;
 }
 
 QStatusBar {
-    background-color: #16213e;
-    color: #e8e8e8;
-    padding: 5px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #1b263b, stop:1 #0d1b2a);
+    color: #778da9;
+    padding: 8px 12px;
+    font-size: 12px;
+    border-top: 1px solid rgba(65, 90, 119, 0.5);
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+QScrollBar:vertical {
+    background: #0d1b2a;
+    width: 12px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #415a77, stop:1 #778da9);
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #778da9, stop:1 #e0e1dd);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background: #0d1b2a;
+    height: 12px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #415a77, stop:1 #778da9);
+    border-radius: 6px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #778da9, stop:1 #e0e1dd);
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+QToolTip {
+    background-color: #1b263b;
+    color: #e0e1dd;
+    border: 1px solid #415a77;
+    border-radius: 6px;
+    padding: 8px 12px;
     font-size: 12px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="leftMargin">
-     <number>10</number>
+     <number>15</number>
     </property>
     <property name="topMargin">
-     <number>10</number>
+     <number>15</number>
     </property>
     <property name="rightMargin">
-     <number>10</number>
+     <number>15</number>
     </property>
     <property name="bottomMargin">
-     <number>10</number>
+     <number>15</number>
     </property>
     <item>
      <widget class="QFrame" name="contentFrame">
       <property name="styleSheet">
        <string notr="true">QFrame#contentFrame {
-    background-color: #0f0f23;
-    border: 1px solid #3a3a5c;
-    border-radius: 8px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #0d1b2a, stop:0.3 #1b263b, stop:0.7 #0d1b2a, stop:1 #1b263b);
+    border: 1px solid rgba(65, 90, 119, 0.4);
+    border-radius: 12px;
 }</string>
       </property>
       <property name="frameShape">
